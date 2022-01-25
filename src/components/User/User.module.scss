@@ -1,0 +1,75 @@
+@use '../../scss/abstract' as *;
+
+$box-padding: 3rem;
+
+.container {
+  grid-row: 1 / -1;
+  background-color: $darkblue-2;
+  border-radius: $box-radius;
+
+  @include bp-large {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+}
+
+.info {
+  background-color: $blue;
+  border-radius: $box-radius;
+  height: 65%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: $box-padding;
+
+  @include bp-large {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.avatar {
+  height: 7.5rem;
+  width: 7.5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+  font-weight: 300;
+  word-spacing: 100rem;
+
+  &::before {
+    content: 'Report for';
+    word-spacing: normal;
+    font-size: 1.4rem;
+    color: $lightblue-2;
+  }
+
+  @include bp-large {
+    word-spacing: normal;
+  }
+}
+
+.timeframes {
+  height: 35%;
+  padding: $box-padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $lightblue-1;
+
+  .active,
+  :hover {
+    cursor: pointer;
+    color: white;
+  }
+
+  @include bp-large {
+    flex-direction: row;
+  }
+}

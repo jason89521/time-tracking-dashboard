@@ -1,0 +1,133 @@
+@use '../../scss/abstract' as *;
+
+.container {
+  position: relative;
+}
+
+.background {
+  height: 10rem;
+  border-radius: $box-radius;
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1.5rem;
+}
+
+.Work {
+  background-color: $orange;
+  background-image: url(../../images/icon-work.svg);
+}
+
+.Play {
+  background-color: $softblue;
+  background-image: url(../../images/icon-play.svg);
+}
+
+.Study {
+  background-color: $red;
+  background-image: url(../../images/icon-study.svg);
+}
+
+.Exercise {
+  background-color: $green;
+  background-image: url(../../images/icon-exercise.svg);
+}
+
+.Social {
+  background-color: $violet;
+  background-image: url(../../images/icon-social.svg);
+}
+
+.SelfCare {
+  background-color: $yellow;
+  background-image: url(../../images/icon-self-care.svg);
+}
+
+.info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 5rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $darkblue-2;
+  border-radius: $box-radius;
+  padding: 3rem;
+
+  &:hover {
+    background-color: lighten($darkblue-2, 20%);
+  }
+
+  @include bp-medium {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(../../images/icon-ellipsis.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    outline: none;
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+
+    &:hover {
+      background-color: white;
+      background-image: none;
+      mask-image: url(../../images/icon-ellipsis.svg);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+    }
+  }
+
+  @include bp-medium {
+    flex: 0 0 100%;
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      background-image: url(../../images/icon-ellipsis.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      outline: none;
+      border: 0;
+      width: 2rem;
+      height: 2rem;
+
+      &:hover {
+        background-color: white;
+        background-image: none;
+        mask-image: url(../../images/icon-ellipsis.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+      }
+    }
+  }
+}
+
+.current {
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.previous {
+  font-size: 1.6rem;
+  color: $lightblue-2;
+}

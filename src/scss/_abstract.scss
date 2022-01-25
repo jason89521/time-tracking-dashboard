@@ -1,0 +1,32 @@
+$blue: hsl(246, 80%, 60%);
+$orange: hsl(15, 100%, 70%);
+$softblue: hsl(195, 74%, 62%);
+$red: hsl(348, 100%, 68%);
+$green: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$yellow: hsl(43, 84%, 65%);
+$darkblue-1: hsl(226, 43%, 10%);
+$darkblue-2: hsl(235, 46%, 20%);
+$lightblue-1: hsl(235, 45%, 61%);
+$lightblue-2: hsl(236, 100%, 87%);
+
+$box-radius: 15px;
+
+// breakpoints
+@mixin bp-large {
+  @media screen and (max-width: 68.75em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (max-width: 34.375em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media screen and (max-width: 23.75em) {
+    @content;
+  }
+}

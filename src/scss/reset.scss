@@ -1,0 +1,28 @@
+@use './abstract' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+
+  @include bp-medium {
+    font-size: 50%;
+  }
+
+  @include bp-medium {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  background-color: $darkblue-1;
+}
