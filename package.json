@@ -46,5 +46,9 @@
     "gh-pages": "^3.2.3",
     "typescript-plugin-css-modules": "^3.4.0"
   },
-  "homepage": "https://jason89521.github.io/time-tracking-dashboard"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jason89521/time-tracking-dashboard"
+  },
+  "homepage": "https://jason89521.github.io/time-tracking-dashboard/"
 }
